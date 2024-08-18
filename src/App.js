@@ -1,10 +1,10 @@
 import "./App.css";
 import Alert from "./components/Alert";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   // For Alert
@@ -23,20 +23,8 @@ function App() {
   const [mode, setMode] = useState("light");
   const [color, setColor] = useState("primary");
 
-  const toggleModeRed = () => {
-    if (mode === "light") {
-      setMode("dark");
-      setColor("danger");
-      document.body.style.backgroundColor = "#FF6969";
-      showAlert("Dark mode has been enabled", "success");
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light mode has been enabled", "success");
-    }
-  };
 
-  const toggleModeBlue = () => {
+  const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
       setColor("primary");
@@ -49,60 +37,29 @@ function App() {
     }
   };
 
-  const toggleModeGreen = () => {
-    if (mode === "light") {
-      setMode("dark");
-      setColor("success");
-      document.body.style.backgroundColor = "#4F6F52";
-      showAlert("Dark mode has been enabled", "success");
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light mode has been enabled", "success");
-    }
-  };
-
-  const toggleModeYellow = () => {
-    if (mode === "light") {
-      setMode("dark");
-      setColor("warning");
-      document.body.style.backgroundColor = "#FF9843";
-      showAlert("Dark mode has been enabled", "success");
-    } else {
-      setMode("light");
-      document.body.style.backgroundColor = "white";
-      showAlert("Light mode has been enabled", "success");
-    }
-  };
-
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar
-          title="MY-APP"
+          title="TEXT-APP"
           mode={mode}
-          toggleModeRed={toggleModeRed}
-          toggleModeBlue={toggleModeBlue}
-          toggleModeGreen={toggleModeGreen}
-          toggleModeYellow={toggleModeYellow}
+          toggleMode={toggleMode}
         />
 
         <Alert alert={alert} />
 
         <div className="container my-3">
-          {/* <Routes>
+          <Routes>
             <Route
               exact path="/"
               element={
-                <TextForm showAlert={showAlert} mode={mode} color={color} />
+                <TextForm showAlert={showAlert} mode={mode} heading="TEXT-APP - Word Counter, Character Counter" color={color} />
               }
             />
-            <Route exact path="/about" element={<About />} />
-          </Routes> */}
-          <TextForm showAlert={showAlert} mode={mode} color={color} />
-          {/* <About /> */}
+            <Route exact path="/about" element={<About mode={mode} />} />
+          </Routes>
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }

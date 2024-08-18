@@ -46,19 +46,22 @@ export default function TextForm(props) {
           ></textarea>
         </div>
         <button
-          className={`btn btn-${props.color} mx-1`}
+          disabled={text.length === 0}
+          className={`btn btn-${props.color} mx-1 my-1`}
           onClick={handleUpClick}
         >
           Convert to UPPER CASE
         </button>
         <button
-          className={`btn btn-${props.color} mx-1`}
+          disabled={text.length === 0}
+          className={`btn btn-${props.color} mx-1 my-1`}
           onClick={handleLoClick}
         >
           Convert to lower CASE
         </button>
         <button
-          className={`btn btn-${props.color} mx-1`}
+          disabled={text.length === 0}
+          className={`btn btn-${props.color} mx-1 my-1`}
           onClick={handleClClick}
         >
           Clear Text
@@ -83,7 +86,7 @@ export default function TextForm(props) {
         <p>
           {text.length > 0
             ? text
-            : "Enter something in the Text Box above to Preview it Here"}
+            : "Nothing to preview!"}
         </p>
       </div>
     </>
