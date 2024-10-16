@@ -120,4 +120,4 @@ Want to contribute? Awesome! Here’s how:
 - **Niranjan Kumar Singh**
 - **Email:** [niranjansingh1419@gmail.com](mailto:niranjansingh1419@gmail.com)
 - **GitHub:** [Niranjan-Kumar-Singh](https://github.com/Niranjan-Kumar-Singh)
-- **LinkedIn:** [Niranjan Kumar Singh](https://www.linkedin.com/in/niranjan-kumar-singh/)
+- **LinkedIn:** [Niranjan-Kumar-Singh](https://www.linkedin.com/in/niranjan-kumar-singh/)
