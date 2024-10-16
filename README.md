@@ -32,7 +32,7 @@ Here's how the Text Counter App works in action:
 
 Here's a quick look at the app's homepage:
 
-![Text Counter App Screenshot](./src/homepage.png)
+![Text Counter App Screenshot](./homepage.png)
 
 ---
 
